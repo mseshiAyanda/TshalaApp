@@ -1,0 +1,54 @@
+{% extends "account/base.html" %}
+
+  {% block title %}
+    Welcome to Tshala!
+  {% endblock %}
+
+  <style>
+		
+		#search1{
+			text-align: center;
+		}
+  </style>
+  
+{% block content%}
+<div class="umzimba1">
+<h1>Wellcome to Tshala!<h1>
+
+
+<div class="raw" >
+  <div class="col">
+      <div class="card card-body">
+        
+         <form method="get" id="search1">
+              {{ myFilter.form }}
+         <button class="btn btn-primary" type="submit">
+         Search</button>
+         <form>
+      </div>  
+  </div>
+</div>
+
+
+
+
+<div class="container">
+   {% for x in all2 %}
+    <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+    <video class="embed-responsive embed-responsive-16by9" controls="controls" > 
+        <source src="{{x.video.url}}" type="video/mp4" />
+    </video>
+
+    <a href="/video/{{x.id}}">More Info</a>
+    <a target="_blank" class="btn btn-sm btn-warning" href="http://127.0.0.1:8000/simple-checkout">Invest</a>
+	<hr>
+   {% endfor %}
+   
+   
+</div>
+
+
+
+      
+
+{% endblock %}

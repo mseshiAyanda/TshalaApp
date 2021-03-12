@@ -1,0 +1,29 @@
+{% extends "account/base.html" %}
+
+  {% block title %}
+    Get Company Info
+  {% endblock %}
+  
+
+{% block content%}
+
+<div>
+
+{% for video in adds %}
+  <ul> 
+    <li>Country: {{video.city}}</l>
+    <li>City: {{video.country}}</li>
+    <li>Bussiness Type: {{video.busstype}}</li>
+    <li>Company Name: {{video.companyname}}</li>
+    <li>Registration Number : {{video.regnumber}}</li>
+    <li>Names of Directors: {{video.nameofd}}</li>
+    <li>Names of Shareholders: {{video.nameofs}}</li>
+   </ul>
+{% endfor %}
+</div>
+
+
+
+
+    
+{% endblock %}
