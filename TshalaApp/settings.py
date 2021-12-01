@@ -140,3 +140,8 @@ LOGOUT_URL = '/logout'
 
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# New-Item -Path . -Name "cloud-init-jenkins.txt" -ItemType "file" -Value "This is a text string."
+
+# azure
+# @rtgh@kjhss!kjhjko
